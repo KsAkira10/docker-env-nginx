@@ -1,0 +1,11 @@
+{
+  "name": "docker-env-nginx",
+  "version": "1.0.0",
+  "description": "Set docker env to nginx",
+  "scripts": {
+    "predocker": "docker build -t $npm_package_name:$npm_package_version -t $npm_package_name:latest .",
+    "docker": "docker run --rm -it -p 8080:80 --env-file .env $npm_package_name:latest"
+  },
+  "author": "Lucas Akira Uehara <akirauehara@hotmail.com>",
+  "license": "ISC"
+}
